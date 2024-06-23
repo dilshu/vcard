@@ -1,44 +1,67 @@
-<!DOCTYPE html>
-<html lang="en-US">
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MDC</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/6bee25835f.js" crossorigin="anonymous"></script>
-  <link rel="icon" href="mdc.jpg" type="image/x-icon"/>
-</head>
-	
-<body>
-  <img src="profile.jpg" alt="Profile Picture">
+:root {
+    --textColor: white;
+    --font: 'Karla', sans-serif;
+}
 
-  <p id="userName">Mohammed Dilshad C</p>
-  <p id="description">Sales , Mobile Accessories</p>
+html {
+    /*FONT:*/   
+    font-family: var(--font);
+    color: var(--textColor);
+    font-size: 18px; 
+    font-weight: 400;
+
+    /*BACKGROUND:*/
+    background: url('sky.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     
-  <main>
-      <a href="tel:+971551618462" target="blank"><i class="fa fa-phone">&nbsp;</i> +971551618462</a>
-      <a href="https://wa.me/971551618462" target="blank">
-          <i class="fab fa-whatsapp">&nbsp;</i>
-          Whatsapp
-      </a>
-      <a href="https://store1758.store.link/" target="blank"><i class="fa fa-store">&nbsp;</i>Catalog</a>
-    <a href="https://www.instagram.com/mdc8497" target="_blank">
-      <i class="fab fa-instagram">&nbsp;</i> Instagram
-    </a>
-    <a href="https://www.tiktok.com/@mdc8497" target="_blank">
-      <i class="fab fa-tiktok">&nbsp;</i> TikTok
-    </a>
-    <a href="https://youtube.com/@mdc8497" target="_blank">
-      <i class="fab fa-youtube">&nbsp;</i> YouTube
-    </a>
-    <a href="https://www.linkedin.com/in/dilshu" target="_blank">
-      <i class="fab fa-linkedin">&nbsp;</i> LinkedIn
-    </a>
-    <a href="https://github.com/dilshu" target="_blank">
-      <i class="fab fa-github">&nbsp;</i> Github
-    </a>
-  </main>
-  
-</body>
-</html>
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    margin: 10px auto; /*auto - center the linktree*/
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%; /*round image*/
+}
+
+#userName {
+    font-weight: 700; /*bold*/
+}
+
+#description {
+    margin: 20px auto;
+}
+
+main {
+    width: auto;
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+/*LINKS*/
+a {
+    /*LINKS TEXT*/
+    color: var(--textColor);
+    text-decoration: none;
+    text-align: center;
+
+    /*LINKS BORDER:*/
+    border: 2px solid var(--textColor);
+    border-radius: 10px;
+
+    display: block; /*each link takes a whole line*/
+    margin: 10px;
+    padding: 10px; 
+}
